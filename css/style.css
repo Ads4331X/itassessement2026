@@ -29,6 +29,16 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Crimson Text", Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
 /*  nav bar css */
 .site-header {
   position: fixed;
@@ -89,4 +99,181 @@ html {
 .nav-menu a.active {
   color: var(--red-light);
   border-color: var(--red);
+}
+
+.hero {
+  background-image: url(../images/samurai.png);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--nav-h);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.slider-wrap {
+  position: absolute;
+  inset: 0;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+  padding: 2rem;
+}
+.slide.active {
+  opacity: 1;
+}
+.slide-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-family: "Electroharmonix", sans-serif;
+  font-size: clamp(2rem, 7vw, 5rem);
+  color: var(--ink);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+}
+.hero-title .red {
+  color: var(--red);
+}
+.hero-sub {
+  font-family: "Electroharmonix", sans-serif;
+  font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+  color: var(--charcoal);
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+}
+
+/* typing animation (keep your existing effect) */
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--ink);
+  width: 0;
+  animation:
+    typing 3s steps(20) forwards,
+    blink 0.7s step-end 3,
+    hideCursor 0s forwards 3s;
+  display: inline-block;
+}
+.typing-2 {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid transparent;
+  width: 0;
+  display: inline-block;
+  animation:
+    typing 3s steps(20) forwards 3s,
+    showCursor 0s forwards 3s,
+    blink 0.7s step-end 3 3s,
+    hideCursor 0s forwards 6s;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes showCursor {
+  to {
+    border-color: var(--ink);
+  }
+}
+@keyframes hideCursor {
+  to {
+    border-color: transparent;
+  }
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  z-index: 10;
+}
+.s-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(26, 8, 4, 0.35);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.s-dot.active {
+  background: var(--red);
+  transform: scale(1.4);
+}
+.s-btn {
+  background: rgba(192, 57, 43, 0.25);
+  border: 1px solid var(--red-dark);
+  color: var(--ink);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s;
+}
+.s-btn:hover {
+  background: rgba(192, 57, 43, 0.55);
+}
+
+/* buttons */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  font-family: "Electroharmonix", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.3s;
+  border: none;
+  text-transform: uppercase;
+}
+.btn-red {
+  background: var(--red);
+  color: var(--cream);
+}
+.btn-red:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--red);
+  border: 1.5px solid var(--red);
+}
+.btn-outline:hover {
+  background: var(--red);
+  color: var(--cream);
+  transform: translateY(-2px);
 }

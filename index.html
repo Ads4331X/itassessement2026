@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- ===== NAVBAR (identical on all pages) ===== -->
+    <!--  NAVBAR  -->
     <header class="site-header">
       <div class="nav-inner">
         <a href="index.html" class="site-logo">ADARSHA KARKI</a>
@@ -33,5 +33,76 @@
         </nav>
       </div>
     </header>
+
+    <section class="hero">
+      <div class="slider-wrap">
+        <div class="slide slide-1 active">
+          <div class="slide-content">
+            <h1 class="hero-title">
+              <span class="typing">HELLO SAMURAI</span>
+            </h1>
+            <p class="hero-sub">
+              <span class="typing-2">I am Adarsha Karki</span>
+            </p>
+            <div
+              style="
+                margin-top: 2rem;
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+                flex-wrap: wrap;
+              "
+            >
+              <a href="projects.html" class="btn btn-red">View Projects</a>
+              <a href="contact.html" class="btn btn-outline">Hire Me</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide slide-2">
+          <div class="slide-content">
+            <h1 class="hero-title">WEB <span class="red">DEVELOPER</span></h1>
+            <p class="hero-sub">HTML &bull; CSS &bull; JAVASCRIPT</p>
+            <p
+              style="
+                color: var(--charcoal);
+                max-width: 480px;
+                margin: 1rem auto 2rem;
+              "
+            >
+              Building fast, clean and beautiful websites — one pixel at a time.
+            </p>
+            <a href="skills.html" class="btn btn-red">My Skills</a>
+          </div>
+        </div>
+
+        <div class="slide slide-3">
+          <div class="slide-content">
+            <h1 class="hero-title">LET'S <span class="red">CREATE</span></h1>
+            <p class="hero-sub">OPEN TO OPPORTUNITIES</p>
+            <p
+              style="
+                color: var(--charcoal);
+                max-width: 480px;
+                margin: 1rem auto 2rem;
+              "
+            >
+              Available for freelance projects, internships and collaborations.
+            </p>
+            <a href="contact.html" class="btn btn-red">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <button class="s-btn prev" aria-label="Previous slide">&#8592;</button>
+        <button class="s-dot" aria-label="Slide 1"></button>
+        <button class="s-dot" aria-label="Slide 2"></button>
+        <button class="s-dot" aria-label="Slide 3"></button>
+        <button class="s-btn next" aria-label="Next slide">&#8594;</button>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
