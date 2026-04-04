@@ -1,0 +1,92 @@
+@import url("https://fonts.cdnfonts.com/css/electroharmonix");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap");
+
+/* variables */
+:root {
+  --red: #c0392b;
+  --red-dark: #8b0000;
+  --red-light: #e74c3c;
+  --cream: #f5e6c8;
+  --parchment: #ede0c4;
+  --ink: #1a1008;
+  --charcoal: #2c1810;
+  --navy: #1a1f3a;
+  --gold: #c9a84c;
+  --muted: #6b5c4e;
+  --max-width: 1280px;
+  --nav-h: 72px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*  nav bar css */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-h);
+  z-index: 9999;
+  background: rgba(26, 8, 4, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--red);
+}
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-logo {
+  font-family: "Electroharmonix", sans-serif;
+  font-size: 1.1rem;
+  color: var(--cream);
+  text-decoration: none;
+  letter-spacing: 3px;
+}
+.site-logo span {
+  color: var(--red-light);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 0.2rem;
+}
+.nav-menu a {
+  font-family: "Electroharmonix", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  color: var(--cream);
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  transition:
+    color 0.25s,
+    border-color 0.25s;
+  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
+}
+.nav-menu a:hover {
+  color: var(--red-light);
+  border-color: var(--red-light);
+}
+.nav-menu a:visited {
+  color: #d4a5a5;
+}
+.nav-menu a.active {
+  color: var(--red-light);
+  border-color: var(--red);
+}
