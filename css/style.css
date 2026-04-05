@@ -39,6 +39,12 @@ body {
   overflow-x: hidden;
 }
 
+.page-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
 /*  nav bar css */
 .site-header {
   position: fixed;
@@ -276,4 +282,79 @@ body {
   background: var(--red);
   color: var(--cream);
   transform: translateY(-2px);
+}
+
+.section {
+  padding: 4rem 0;
+}
+.section-alt {
+  background: rgba(26, 8, 4, 0.04);
+}
+
+.sec-label {
+  font-family: "Electroharmonix", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 4px;
+  color: var(--red);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.sec-title {
+  font-family: "Electroharmonix", sans-serif;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+.sec-title span {
+  color: var(--red);
+}
+.sec-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--gold));
+  margin-bottom: 2.5rem;
+}
+
+/* grid layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+
+/* status grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.stat-box {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: rgba(245, 230, 200, 0.75);
+  border: 1px solid rgba(192, 57, 43, 0.2);
+  border-radius: 4px;
+}
+.stat-num {
+  font-family: sans-serif;
+  font-size: 2rem;
+  color: var(--red);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.stat-lbl {
+  font-size: 0.82rem;
+  color: var(--muted);
 }
