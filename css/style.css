@@ -456,3 +456,41 @@ body {
   font-size: 0.8rem;
   color: var(--muted);
 }
+
+/* inner page hero */
+.page-hero {
+  padding: calc(var(--nav-h) + 3rem) 0 2.5rem;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(192, 57, 43, 0.08) 0%,
+    transparent 100%
+  );
+}
+.page-hero h1 {
+  font-family: "Electroharmonix", sans-serif;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  color: var(--ink);
+}
+.page-hero h1 span {
+  color: var(--red);
+}
+.page-hero p {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* breadcrumb */
+.breadcrumb {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+.breadcrumb a {
+  color: var(--red-dark);
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  color: var(--red-light);
+}
