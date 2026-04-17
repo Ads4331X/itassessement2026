@@ -67,12 +67,22 @@ function initSkillBars() {
 }
 
 //  load header and footer using js
+function getSiteRoot() {
+  const scripts = document.querySelectorAll("script[src]");
+  for (const s of scripts) {
+    if (s.src.includes("main.js")) {
+      return s.src.replace(/js\/main\.js[^]*$/, "");
+    }
+  }
+  return "./";
+}
+
 async function loadHeader() {
-  const res = await fetch("/header.html");
+  const res = await fetch(getSiteRoot() + "header.html");
   const html = await res.text();
   document.getElementById("header-placeholder").outerHTML = html;
 
-  // Highlight the active nav link
+  // highlight the active nav link
   const links = document.querySelectorAll(".nav-menu a");
   links.forEach((link) => {
     if (link.href === window.location.href) {
@@ -82,12 +92,12 @@ async function loadHeader() {
 }
 
 async function loadFooter() {
-  const res = await fetch("/footer.html");
+  const res = await fetch(getSiteRoot() + "footer.html");
   const html = await res.text();
   document.getElementById("footer-placeholder").outerHTML = html;
 }
 
-/* ── contact form validation ── */
+/*  contact form validation  */
 function initForm() {
   const form = document.getElementById("contact-form");
   if (!form) return;
