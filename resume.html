@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adarsha Karki | Resume</title>
+    <link
+      href="https://fonts.cdnfonts.com/css/electroharmonix"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.2rem;
+        margin-bottom: 3rem;
+      }
+      .skill-group {
+        background: rgba(245, 230, 200, 0.75);
+        border: 1px solid rgba(192, 57, 43, 0.2);
+        border-radius: 4px;
+        padding: 1.4rem;
+        backdrop-filter: blur(6px);
+      }
+      .skill-group h4 {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+        color: var(--red-dark);
+        margin-bottom: 0.9rem;
+        text-transform: uppercase;
+      }
+      .skill-tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+      }
+      .skill-tag {
+        font-size: 0.78rem;
+        color: var(--muted);
+        background: rgba(192, 57, 43, 0.08);
+        border: 1px solid rgba(192, 57, 43, 0.18);
+        border-radius: 2px;
+        padding: 0.2rem 0.6rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    <div class="page-bg">
+      <main>
+        <div class="page-hero">
+          <div class="page-wrap">
+            <div class="breadcrumb">
+              <a href="index.html">Home</a> &rsaquo; Resume
+            </div>
+            <h1>My <span>Resume</span></h1>
+            <p>Education, experience &amp; skills</p>
+          </div>
+        </div>
+
+        <section class="section">
+          <div class="page-wrap">
+            <!-- education -->
+            <span class="sec-label">&#9654; Education</span>
+            <h2 class="sec-title">Academic <span>History</span></h2>
+            <div class="sec-line"></div>
+
+            <div class="table-wrap" style="margin-bottom: 3rem">
+              <table class="dojo-table">
+                <caption>
+                  Education &amp; Academic Achievements
+                </caption>
+                <thead>
+                  <tr>
+                    <th>Institution</th>
+                    <th>Qualification</th>
+                    <th>Period</th>
+                    <th>Grade / Result</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>The British College</strong><br /><span
+                        style="font-size: 0.8rem; color: var(--muted)"
+                        >Thapthali, Kathmandu</span
+                      >
+                    </td>
+                    <td
+                      style="
+                        font-size: large;
+                        color: rebeccapurple;
+                        font-weight: bold;
+                      "
+                    >
+                      BSc (Hons) Computing<br />
+                      <table
+                        style="
+                          margin-top: 0.4rem;
+                          font-size: 0.8rem;
+                          width: 100%;
+
+                          border-collapse: collapse;
+                        "
+                      ></table>
+                    </td>
+                    <td>2024 – Present</td>
+                    <td><span class="badge badge-red">Year 2</span></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Xaview International College</strong><br /><span
+                        style="font-size: 0.8rem; color: var(--muted)"
+                        >Kalopul, Kathmandu</span
+                      >
+                    </td>
+                    <td
+                      colspan="1"
+                      style="
+                        font-size: large;
+                        color: rebeccapurple;
+                        font-weight: bold;
+                      "
+                    >
+                      +2 Science
+                    </td>
+                    <td>2022 – 2024</td>
+
+                    <td><span class="badge badge-gold">Completed</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- experience -->
+            <span class="sec-label">&#9654; Experience</span>
+            <h2 class="sec-title">Work <span>Experience</span></h2>
+            <div class="sec-line"></div>
+
+            <div class="table-wrap" style="margin-bottom: 3rem">
+              <table class="dojo-table">
+                <caption>
+                  Work &amp; Volunteer Experience
+                </caption>
+                <thead>
+                  <tr>
+                    <th>Role</th>
+                    <th>Organisation</th>
+                    <th>Duration</th>
+                    <th>Type</th>
+                    <th>Key Skills</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Web Developer</strong></td>
+                    <td>Personal Projects</td>
+                    <td rowspan="1" class="merged-cell">2022 - Present</td>
+                    <td><span class="badge badge-red">Self</span></td>
+                    <td>HTML, CSS, JS, PHP, React Git</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- SKILLS SUMMARY -->
+            <span class="sec-label">&#9654; Skills</span>
+            <h2 class="sec-title">Technical <span>Skills</span></h2>
+            <div class="sec-line"></div>
+
+            <div class="skills-grid">
+              <div class="skill-group">
+                <h4>Languages</h4>
+                <div class="skill-tag-list">
+                  <span class="skill-tag">HTML5</span>
+                  <span class="skill-tag">CSS3</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">PHP</span>
+                  <span class="skill-tag">C++</span>
+                </div>
+              </div>
+              <div class="skill-group">
+                <h4>Tools &amp; Platforms</h4>
+                <div class="skill-tag-list">
+                  <span class="skill-tag">Git</span>
+                  <span class="skill-tag">GitHub</span>
+                  <span class="skill-tag">VS Code</span>
+                  <span class="skill-tag">MySQL</span>
+                </div>
+              </div>
+              <div class="skill-group">
+                <h4>Concepts</h4>
+                <div class="skill-tag-list">
+                  <span class="skill-tag">OOP</span>
+                  <span class="skill-tag">REST APIs</span>
+                  <span class="skill-tag">DOM Manipulation</span>
+                  <span class="skill-tag">Responsive Design</span>
+                </div>
+              </div>
+              <div class="skill-group">
+                <h4>Soft Skills</h4>
+                <div class="skill-tag-list">
+                  <span class="skill-tag">Self-directed learning</span>
+                  <span class="skill-tag">Problem solving</span>
+                  <span class="skill-tag">Attention to detail</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 1rem">
+              <a
+                href="contact.html"
+                class="btn btn-red"
+                style="margin-right: 1rem"
+                >Hire Me</a
+              >
+              <a href="mailto:adskarki@gmail.com" class="btn btn-outline"
+                >Email Me</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div id="footer-placeholder"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
