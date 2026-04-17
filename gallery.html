@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adarsha Karki | Gallery</title>
+    <link
+      href="https://fonts.cdnfonts.com/css/electroharmonix"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: rgba(10, 4, 2, 0.92);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .lightbox.open {
+        display: flex;
+      }
+      .lightbox img {
+        max-width: 90vw;
+        max-height: 80vh;
+        border: 2px solid var(--red);
+        border-radius: 4px;
+        object-fit: contain;
+      }
+      .lb-caption {
+        color: var(--cream);
+        font-family: "Electroharmonix", sans-serif;
+        font-size: 0.78rem;
+        letter-spacing: 2px;
+        margin-top: 1rem;
+      }
+      .lb-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+        color: var(--cream);
+        font-size: 2rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+        line-height: 1;
+        transition: color 0.2s;
+      }
+      .lb-close:hover {
+        color: var(--red-light);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main>
+      <div class="page-hero">
+        <div class="page-wrap">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a> &rsaquo; Gallery
+          </div>
+          <h1>Project <span>Screenshots</span></h1>
+          <p>Click any image to view full size</p>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="page-wrap">
+          <span class="sec-label">&#9654; My Work</span>
+          <h2 class="sec-title">Project <span>Screenshots</span></h2>
+          <div class="sec-line"></div>
+
+          <div class="gallery-grid">
+            <a
+              href="images/projects/samurai-portfolio.png"
+              class="thumb-wrap"
+              onclick="
+                openLB(
+                  event,
+                  'images/projects/samurai-portfolio.png',
+                  'Portfolio Homepage',
+                )
+              "
+            >
+              <img
+                src="images/projects/samurai-portfolio.png"
+                alt="Screenshot of portfolio homepage with samurai theme"
+              />
+              <div class="thumb-caption">Portfolio Homepage</div>
+            </a>
+
+            <a
+              href="images/projects/edukate.png"
+              class="thumb-wrap"
+              onclick="
+                openLB(event, 'images/projects/edukate.png', 'Edukate Page')
+              "
+            >
+              <img
+                src="images/projects/edukate.png"
+                alt="Screenshot of Edukate page "
+              />
+              <div class="thumb-caption">Edukate Page</div>
+            </a>
+
+            <a
+              href="images/projects/chess.png"
+              class="thumb-wrap"
+              onclick="openLB(event, 'images/projects/chess.png', 'Chess')"
+            >
+              <img
+                src="images/projects/chess.png"
+                alt="Screenshot of chess game built in JavaScript"
+              />
+              <div class="thumb-caption">Chess</div>
+            </a>
+
+            <a
+              href="images/projects/weather.png"
+              class="thumb-wrap"
+              onclick="openLB(event, 'images/projects/weather.png', 'Weather')"
+            >
+              <img
+                src="images/projects/weather.png"
+                alt="Screenshot of weather web application"
+              />
+              <div class="thumb-caption">Weather</div>
+            </a>
+
+            <a
+              href="images/projects/newAI.png"
+              class="thumb-wrap"
+              onclick="
+                openLB(event, 'images/projects/newAI.png', 'AI Assistant')
+              "
+            >
+              <img
+                src="images/projects/newAI.png"
+                alt="Screenshot of an AI assistant application"
+              />
+              <div class="thumb-caption">AI Assistant</div>
+            </a>
+
+            <a
+              href="images/projects/todo.png"
+              class="thumb-wrap"
+              onclick="openLB(event, 'images/projects/todo.png', 'To-Do List')"
+            >
+              <img
+                src="images/projects/todo.png"
+                alt="Screenshot of To-Do List web app with backend"
+              />
+              <div class="thumb-caption">To-Do List</div>
+            </a>
+
+            <a
+              href="images/projects/money.png"
+              class="thumb-wrap"
+              onclick="
+                openLB(event, 'images/projects/money.png', 'Expense Tracker')
+              "
+            >
+              <img
+                src="images/projects/money.png"
+                alt="Screenshot of expense tracker web application"
+              />
+              <div class="thumb-caption">Expense Tracker</div>
+            </a>
+
+            <a
+              href="images/projects/calculator.png"
+              class="thumb-wrap"
+              onclick="
+                openLB(
+                  event,
+                  'images/projects/calculator.png',
+                  'Simple Calculator ',
+                )
+              "
+            >
+              <img
+                src="images/projects/calculator.png"
+                alt="Screenshot of calculator made using Js"
+              />
+              <div class="thumb-caption">Simple Calculator</div>
+            </a>
+
+            <a
+              href="images/projects/student_profile_management_system.png"
+              class="thumb-wrap"
+              onclick="
+                openLB(
+                  event,
+                  'images/projects/student_profile_management_system.png',
+                  'Profile Management System',
+                )
+              "
+            >
+              <img
+                src="images/projects/student_profile_management_system.png"
+                alt="Screenshot of profile management system"
+              />
+              <div class="thumb-caption">Profile Management System</div>
+            </a>
+
+            <a
+              href="images/projects/tictactoe.png"
+              class="thumb-wrap"
+              onclick="
+                openLB(event, 'images/projects/tictactoe.png', 'Tic-Tac-Toe')
+              "
+            >
+              <img
+                src="images/projects/tictactoe.png"
+                alt="Screenshot of Tic-Tac-Toe made using Js"
+              />
+              <div class="thumb-caption">Tic-Tac-Toe</div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" onclick="closeLB()">
+      <button class="lb-close" onclick="closeLB()" aria-label="Close lightbox">
+        &times;
+      </button>
+      <img id="lb-img" src="" alt="Gallery image enlarged view" />
+      <p class="lb-caption" id="lb-cap"></p>
+    </div>
+    <div id="footer-placeholder"></div>
+
+    <script src="js/main.js"></script>
+    <script>
+      function openLB(e, src, cap) {
+        e.preventDefault();
+        document.getElementById("lb-img").src = src;
+        document.getElementById("lb-cap").textContent = cap;
+        document.getElementById("lightbox").classList.add("open");
+      }
+      function closeLB() {
+        document.getElementById("lightbox").classList.remove("open");
+      }
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeLB();
+      });
+    </script>
+  </body>
+</html>
