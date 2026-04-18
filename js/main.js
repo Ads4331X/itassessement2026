@@ -89,6 +89,23 @@ async function loadHeader() {
       link.classList.add("active");
     }
   });
+
+  // hamburger toggle
+  const toggle = document.getElementById("nav-toggle");
+  const navEl = toggle ? toggle.closest("header").querySelector("nav") : null;
+  if (toggle && navEl) {
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("open");
+      navEl.classList.toggle("open");
+    });
+    // close menu when a link is clicked
+    navEl.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => {
+        toggle.classList.remove("open");
+        navEl.classList.remove("open");
+      });
+    });
+  }
 }
 
 async function loadFooter() {
