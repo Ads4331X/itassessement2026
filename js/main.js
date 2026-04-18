@@ -167,6 +167,16 @@ function initForm() {
 loadHeader();
 loadFooter();
 
+/* disable nav transition during window resize to prevent animation flash */
+let resizeTimer;
+window.addEventListener("resize", () => {
+  document.body.classList.add("no-transition");
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.body.classList.remove("no-transition");
+  }, 100);
+});
+
 /*  init all  */
 document.addEventListener("DOMContentLoaded", () => {
   initSlider();
